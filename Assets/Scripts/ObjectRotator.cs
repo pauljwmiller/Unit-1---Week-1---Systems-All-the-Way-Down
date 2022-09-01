@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectRotator : MonoBehaviour
 {
-    float orbitSpeed = .1f;
+    float orbitSpeed = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +16,6 @@ public class ObjectRotator : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3 (0, orbitSpeed, 0));
+        transform.Translate(Vector3.forward * Time.deltaTime * 10);
     }
 }
